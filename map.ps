@@ -1,0 +1,16 @@
+/arg{ exch def } def
+/map {
+	0 dict begin
+	/f arg   
+    /oldArray arg          
+    /newarray oldArray length array def   
+    0 1 oldArray length 1 sub {
+        /i arg      
+        newarray i oldArray i get 
+        f 
+        put                 
+    } for
+newarray
+end
+} def
+[1 2 3 4]{ dup mul} map

@@ -1,0 +1,13 @@
+/reduce {
+    /arr exch def        
+    /f exch def          
+    
+    0 exch {             
+        /elem exch def   
+        elem             
+        f                
+    } forall            
+} def
+
+[1 2 3 4] { add } reduce
+

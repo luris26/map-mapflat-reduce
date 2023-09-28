@@ -1,0 +1,17 @@
+/flatmap {
+    /arr exch def
+    /f exch def
+    /newarray [] def 
+
+    arr {
+        aload pop 
+        {
+            /i arg
+            newarray i get
+            f
+            put
+        } forall
+        concat
+    } forall
+} def
+[1 2 3 4] { aload } flatmap
